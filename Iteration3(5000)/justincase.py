@@ -10,17 +10,22 @@ entries = {}
 for line in passfile:
 	
 	line = line.strip("\n")
-	passes.append(line)
-
+	passes.append(line) #appends all bad passwords to an array
+count = 0
 for row in csv_reader:
-	for password in passes:
+	print(count)
+	count+=1
 		
-		if password == row[1]:
+	if row[1] in passes:
 			
-			csv_writer.writerow([row[0],row[1],'bad'])
+		entries[row[1]] = 'bad'
 		
-		else:
+	else:
 			
-			csv_writer.writerow([row[0],row[1],'good'])
+		entries[row[1]] = 'good'
+for keys in entries:
+	
+	print(keys,entries[keys])
+
 file.close()
 file2.close()
