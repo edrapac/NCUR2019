@@ -19,3 +19,12 @@ from sklearn import preprocessing
 data = 'training-passwords_similarities.csv'
 accounts = pd.read_csv(data)
 
+data = "training_passwords_similarities(firstname only).csv"
+accounts = pd.read_csv(data)
+accounts.head()
+
+accounts.columns = ['Fname', 'Password','score']
+
+accounts_data = accounts.ix[:,(0,1)].values #using fname and password
+y = accounts.ix[:,2] #taget variable
+x = scale(accounts_data)
