@@ -7,3 +7,4 @@ target_length = max(len(window) for window in windows) #makes sure we have the m
 
 matrix = vectorizer.transform(windows,target_length) # give it the strings to vectorize as well as the max length for any padding issues
 
+print(matrix)
