@@ -14,7 +14,6 @@ wc_embd = WordCharEmbd(
 )
 for sentence in sentences:
     wc_embd.update_dicts(sentence)
-
 inputs, embd_layer = wc_embd.get_embedding_layer()
 lstm_layer = keras.layers.LSTM(units=5, name='LSTM')(embd_layer)
 softmax_layer = keras.layers.Dense(units=2, activation='softmax', name='Softmax')(lstm_layer)
