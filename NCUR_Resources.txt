@@ -1,0 +1,10 @@
+Resources:
+~Documentation and material references used to write Character_level_Word_Embedding~
+=============================================================================
+https://keras.io/layers/embeddings/
+https://keras.io/datasets/
+https://keras.io/preprocessing/sequence/
+https://github.com/keras-team/keras/issues/6351
+https://datascience.stackexchange.com/questions/31141/one-hot-encoding-at-character-level-with-keras
+https://keras.io/models/model/
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.asarray.html
